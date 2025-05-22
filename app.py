@@ -23,9 +23,9 @@ uploaded_file = st.file_uploader("Upload a 28x28 grayscale digit image", type=["
 
 if uploaded_file is not None:
     # Display image
-    image = Image.open(uploaded_file).convert("L")  # Convert to grayscale
-    image = ImageOps.invert(image)                  # Invert to match MNIST (white digit on black background)
-    image = image.resize((28, 28))                  # Resize to 28x28
+    image = Image.open(uploaded_file).convert("L")  
+    image = ImageOps.invert(image)                  
+    image = image.resize((28, 28))                  
 
     st.image(image, caption="Uploaded Image", use_column_width=False)
 
